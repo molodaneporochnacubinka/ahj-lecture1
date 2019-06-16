@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "jest",
     "coverage": "jest --coverage",
-    "lint": "eslint .",
-    "build": "webpack --mode production"
+    "lint": "eslint ."
   },
   "license": "MIT",
   "repository": "https://github.com/molodaneporochnacubinka/ahj-lecture1.git",
@@ -29,10 +29,13 @@
     "url-loader": "^2.0.0",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.3",
-    "webpack-dev-server": "^3.7.1"
+    "webpack-dev-server": "^3.7.1",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "core-js": "3"
+    "core-js": "3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "terser-webpack-plugin": "^1.3.0"
   }
 }
